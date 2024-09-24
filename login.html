@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-page"></body>
+<div id="login-container">
+    <form id="loginForm" action="#" method="post">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <br><br>
+        <input type="submit" value="Entrar">
+    </form>
+
+    <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const senha = document.getElementById('senha').value;
+
+        // validação do usuario
+        if (email === "aluno@aluno.com" && senha === "12345") {
+            window.location.href = 'index.html';
+            // Mensagem de erro caso não preencha todos os campos 
+        } else if (!email || !senha) {
+            alert('Por favor, preencha todos os campos!');
+        } else {
+            // Mensagem de erro caso tenha senha e e-mail incorretos
+            alert('E-mail ou senha incorretos. Tente novamente!');
+        }
+        
+    });
+</script>
+</body>
