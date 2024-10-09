@@ -1,0 +1,135 @@
+
+/* PÁGINA PERFIL DO ALUNO */
+ 
+/* Estiliza o corpo da página */
+body {  
+  font-family: Arial, sans-serif;  /* Define a fonte utilizada na página */
+  background-color: #F5F5F5;  /* Define a cor de fundo da página */
+}  
+
+/* Estiliza o contêiner principal */
+.container {  
+  max-width: 800px;  /* Define a largura máxima do contêiner */
+  margin: 40px auto;  /* Adiciona margem superior e inferior, e centraliza o contêiner */
+  padding: 20px;  /* Adiciona espaço interno ao contêiner */
+  background-color: #F0F0F0;  /* Define a cor de fundo do contêiner */
+  border: 1px solid #CCC;  /* Adiciona uma borda ao contêiner */
+  box-shadow: 0 0 10px rgba(246, 142, 7, 0.1);  /* Adiciona uma sombra ao contêiner */
+}  
+
+/* Estiliza o cabeçalho */
+header {  
+  background-color: #333;  /* Define a cor de fundo do cabeçalho */
+  color: #FFF;  /* Define a cor do texto do cabeçalho */
+  padding: 10px;  /* Adiciona espaço interno ao cabeçalho */
+  text-align: center;  /* Centraliza o texto do cabeçalho */
+}  
+
+/* Estiliza o título do cabeçalho */
+header h1 {  
+  font-size: 24px;  /* Define o tamanho da fonte do título */
+  margin-bottom: 10px;  /* Adiciona espaço abaixo do título */
+}  
+
+/* Estiliza a seção principal */
+main {  
+  padding: 20px;  /* Adiciona espaço interno à seção principal */
+}  
+
+/* Estiliza o perfil do usuário */
+.profile {  
+  display: flex;  /* Usa flexbox para alinhar os itens do perfil */
+  align-items: center;  /* Alinha os itens verticalmente no centro */
+  margin-bottom: 20px;  /* Adiciona espaço abaixo do perfil */
+}  
+
+/* Estiliza o avatar do usuário */
+.avatar {  
+  width: 100px;  /* Define a largura do avatar */
+  height: 100px;  /* Define a altura do avatar */
+  border-radius: 50%;  /* Arredonda o avatar para deixá-lo circular */
+  margin-right: 20px;  /* Adiciona espaço à direita do avatar */
+}  
+
+/* Estiliza a imagem do avatar */
+.avatar img {  
+  width: 100%;  /* Define a largura da imagem como 100% do avatar */
+  height: 100%;  /* Define a altura da imagem como 100% do avatar */
+  border-radius: 50%;  /* Arredonda a imagem para deixá-la circular */
+}  
+
+/* Estiliza as informações do perfil */
+.info {  
+  flex: 1;  /* Permite que a seção de informações ocupe o espaço restante */
+}  
+
+/* Estiliza o título das informações do perfil */
+.info h2 {  
+  font-size: 18px;  /* Define o tamanho da fonte do título das informações */
+  margin-bottom: 10px;  /* Adiciona espaço abaixo do título */
+}  
+
+/* Estiliza os parágrafos das informações do perfil */
+.info p {  
+  font-size: 14px;  /* Define o tamanho da fonte do parágrafo */
+  margin-bottom: 10px;  /* Adiciona espaço abaixo do parágrafo */
+}  
+
+/* Estiliza o formulário */
+form {  
+  margin-top: 20px;  /* Adiciona margem superior ao formulário */
+}  
+
+/* Estiliza os grupos de campos do formulário */
+.form-group {  
+  margin-bottom: 20px;  /* Adiciona espaço abaixo de cada grupo de campos */
+}  
+
+/* Estiliza os rótulos dos campos do formulário */
+.form-group label {  
+  display: block;  /* Faz com que o rótulo ocupe toda a largura disponível */
+  margin-bottom: 10px;  /* Adiciona espaço abaixo do rótulo */
+}  
+
+/* Estiliza os campos de entrada de texto, email e telefone */
+.form-group input[type="text"], 
+.form-group input[type="email"], 
+.form-group input[type="tel"] {  
+  width: 100%;  /* Define a largura dos campos como 100% do formulário */
+  padding: 10px;  /* Adiciona espaço interno aos campos */
+  margin-bottom: 10px;  /* Adiciona espaço abaixo dos campos */
+  border: 1px solid #CCC;  /* Adiciona uma borda aos campos */
+}  
+
+/* Estiliza os campos de entrada de data */
+.form-group input[type="date"] {  
+  width: 100%;  /* Define a largura do campo de data como 100% do formulário */
+  padding: 10px;  /* Adiciona espaço interno ao campo de data */
+  margin-bottom: 10px;  /* Adiciona espaço abaixo do campo de data */
+  border: 1px solid #CCC;  /* Adiciona uma borda ao campo de data */
+}  
+
+/* Estiliza o ícone de edição */
+.edit-icon {  
+  display: inline-block;  /* Permite que o ícone de edição seja tratado como um bloco em linha */
+  width: 20px;  /* Define a largura do ícone de edição */
+  height: 20px;  /* Define a altura do ícone de edição */
+  background-color: #333;  /* Define a cor de fundo do ícone de edição */
+  border-radius: 50%;  /* Arredonda o ícone para deixá-lo circular */
+  cursor: pointer;  /* Muda o cursor ao passar o mouse sobre o ícone */
+}  
+
+/* Estiliza o botão de envio do formulário */
+button[type="submit"] {  
+  background-color: #333;  /* Define a cor de fundo do botão */
+  color: #FFF;  /* Define a cor do texto do botão */
+  padding: 10px 20px;  /* Adiciona espaço interno ao botão */
+  border: none;  /* Remove a borda padrão do botão */
+  border-radius: 5px;  /* Arredonda os cantos do botão */
+  cursor: pointer;  /* Muda o cursor ao passar o mouse sobre o botão */
+}  
+
+/* Estiliza o botão de envio ao passar o mouse */
+button[type="submit"]:hover {  
+  background-color: #444;  /* Muda a cor de fundo do botão quando o mouse passa sobre ele */
+}

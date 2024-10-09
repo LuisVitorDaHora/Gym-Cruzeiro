@@ -1,0 +1,111 @@
+
+/* PÁGINA INCIAL PROFESSOR */
+ 
+* {
+    box-sizing: border-box; /* Inclui padding e borda na largura e altura dos elementos */
+    margin:0; /* Remove a margem externa padrão de todos os elementos */
+    padding:0; /* Remove o padding interno padrão de todos os elementos */
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #e98e33; /* laranja */
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center; /* Centraliza o texto */
+
+}    
+
+/* Estilizando o título da sidebar */
+.sidebar-title {
+    font-size: 20px;
+    display: flex; /* Usa Flexbox para alinhamento */
+    justify-content: center; /* Centraliza horizontalmente */
+
+}
+
+/* Estilizando os links da sidebar */
+.sidebar-links a {
+    display: block;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex; /* Usa Flexbox para alinhamento */
+    justify-content: center; /* Centraliza horizontalmente */
+    
+}
+
+/* Estilizando os links ao passar o mouse */
+.sidebar-links a:hover {
+    background-color: #f8cf7c;
+}
+
+.content {
+    width: 80%;
+    background-color: white; /* branco */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.user-photo {
+    width: 300px; /* Tamanho da foto */
+    height: 300px; /* Tamanho da foto */
+    border-radius: 50%; /* Foto redonda */
+    margin-right: 10px;
+}
+
+.user-details {
+    text-align: center; /* Alinha o texto ao centro */
+    margin-top: 15px; /* Afastando as letras da imagem */
+}
+
+h1 {
+    color: white; /* Cor do texto do <h1> */
+}
+
+p {
+    color: white; /* Cor do texto do paragrafo */
+}
+
+.buttons {
+    display: flex; /* Transforma o contêiner em um contêiner flexível */
+    flex-direction: column; /* Organiza os itens dentro do contêiner em uma coluna */
+    margin-top: 20px; /* Afastando os botões do restante do conteúdo */
+}
+
+.btn {
+    background-color: white; /* Cor de fundo do botão */
+    color: black; /* Cor do texto do botão */
+    border: 2px solid black; /* Borda do botão */
+    border-radius: 15px; /* Cantos arredondados do botão */
+    padding: 15px 30px; /* Espaçamento interno (vertical e horizontal) */
+    font-size: 20px; /* Tamanho da fonte do texto do botão */
+    margin: 10px 0; /* Margem superior e inferior do botão */
+    cursor: pointer; /* Cursor que indica que é clicável */
+    transition: background-color 0.3s; /* Animação suave na mudança de cor de fundo */
+    margin: 10px; /* Afastando os botões entre si, se desejado */
+}
+
+
+.btn:hover {
+    background-color: #f4bf9e; /* Muda a cor ao passar o mouse */
+}
+
+
+

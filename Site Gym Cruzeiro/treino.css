@@ -1,0 +1,83 @@
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: #f2f2f2;  
+    margin: 0;
+    padding: 0;
+}  
+
+.header {  
+    display: flex;
+    justify-content: flex-end; /* Alinha o título à direita */
+    padding: 20px;
+}  
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}  
+
+.title-container {  
+    background-color: #0c0c0b;
+    text-align: center; /* Centraliza o título "TREINOS" */
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.title-container h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #f8f4f4;
+}
+
+.main-container {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    padding: 20px;  
+}  
+
+#treinos-list {  
+    list-style: none;  
+    padding: 0;  
+    margin: 0;  
+    width: 100%;  
+}  
+
+#treinos-list li {  
+    display: flex;  
+    justify-content: space-between; /* Faz o botão "Remover" ir para a direita */
+    padding: 10px;  
+    border-bottom: 1px solid #ddd;  
+    width: 100%;
+}  
+
+#treinos-list li:last-child {  
+    border-bottom: none;  
+}  
+
+.button-container {  
+    display: flex;  
+    justify-content: flex-start; /* Alinha os botões à esquerda */
+    padding: 20px 0;  
+    width: 100%;
+}  
+
+#add-treino-button {  
+    background-color: #ff9900;  
+    color: #fff;  
+    padding: 10px 20px;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    margin-right: 10px; /* Espaço entre os botões */
+}  
+
+.back-button {  
+    font-size: 16px;  
+    padding: 10px 20px;
+    background-color: #ddd;
+    border: none;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}

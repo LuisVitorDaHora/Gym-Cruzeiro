@@ -1,0 +1,56 @@
+
+/* PÁGINA HISTÓRICO NA ÁREA DO ALUNO */
+/* Estiliza o corpo da página */
+body {  
+    font-family: Arial, sans-serif;  /* Define a fonte utilizada na página */
+}  
+
+/* Estiliza o cabeçalho da página */
+header {  
+    text-align: right;  /* Alinha o texto do cabeçalho à direita */
+    padding: 20px;  /* Adiciona espaço interno ao cabeçalho */
+}  
+
+/* Estiliza a seção principal da página */
+main {  
+    padding: 20px;  /* Adiciona espaço interno à seção principal */
+}  
+
+/* Estiliza as tabelas */
+table {  
+    width: 100%;  /* Define a largura da tabela como 100% da área disponível */
+    border-collapse: collapse;  /* Remove o espaço entre as bordas das células da tabela */
+}  
+
+/* Estiliza os cabeçalhos da tabela */
+th {  
+    background-color: #f2e8d5;  /* Define a cor de fundo dos cabeçalhos da tabela */
+    padding: 10px;  /* Adiciona espaço interno aos cabeçalhos */
+    text-align: left;  /* Alinha o texto dos cabeçalhos à esquerda */
+}  
+
+/* Estiliza as células da tabela */
+td {  
+    padding: 10px;  /* Adiciona espaço interno às células da tabela */
+    border-bottom: 1px solid #ddd;  /* Adiciona uma borda inferior às células */
+}
+
+/* Estilo para o botão VOLTAR no canto inferior direito */
+.btn-voltar {
+    position: fixed; /* Fixa o botão na posição desejada */
+    bottom: 20px; /* Distância do fundo da página */
+    right: 20px; /* Distância da lateral direita da página */
+    background-color: #333; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Mostra que o botão é clicável */
+    transition: background-color 0.3s; /* Animação suave na mudança de cor */
+}
+
+.btn-voltar:hover {
+    background-color: #555; /* Muda a cor ao passar o mouse */
+}
+   
