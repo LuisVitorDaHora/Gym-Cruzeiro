@@ -1,0 +1,70 @@
+
+/* PÁGINA HISTÓRICO NA ÁREA DO PROFESSOR */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;  
+    color: white;  
+}
+
+header {
+    text-align: center; 
+    padding: 20px;
+    background-color: #444; 
+}
+
+main {
+    padding: 20px; 
+}
+
+table {
+    width: 100%;  
+    border-collapse: collapse;  
+    margin-bottom: 20px;  
+}
+
+th, td {
+    padding: 10px;  
+    text-align: left;  
+    border-bottom: 1px solid #555;  
+    border-right: 1px solid #555;  
+}
+
+th:last-child, td:last-child {
+    border-right: none; 
+}
+
+th {
+    background-color: #e98e33; 
+    color: white; 
+}
+
+.btn-voltar {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px;  
+    background-color: #e98e33;  
+    color: white;  
+    border: none;  
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer;  
+    transition: background-color 0.3s;  
+}
+
+.btn-voltar:hover {
+    background-color: #f8cf7c;  
+}
+
+.separator {
+    height: 1px; 
+    background-color: #555; 
+    margin: 20px 0; 
+}
+   

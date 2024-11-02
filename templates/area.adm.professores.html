@@ -1,0 +1,38 @@
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Área ADM - Professores</title>  
+    <link rel="stylesheet" href="/static/css/area-adm-professores.css">  <!-- Link para o arquivo CSS que estiliza a página -->
+</head>  
+<body>  
+    <header>  
+        <h1>GYM CRUZEIRO</h1>  <!-- Título principal da página -->
+    </header>  
+    <main>  
+        <h2>PROFESSORES</h2>  <!-- Subtítulo que indica a seção dos professores -->
+        <table id="professoresTable">  <!-- Tabela para exibir informações dos professores -->
+            <thead>  
+                <tr>  
+                    <th>ID</th>  <!-- Cabeçalho da coluna para ID -->
+                    <th>Nome</th>  <!-- Cabeçalho da coluna para nome -->
+                    <th>Especialidade</th>  <!-- Cabeçalho da coluna para especialidade -->
+                    <th>Data de Contratação</th>  <!-- Cabeçalho da coluna para data de contratação -->
+                    <th>Status</th>  <!-- Cabeçalho da coluna para status -->
+                    <th>Ações</th> 
+                </tr>  
+            </thead>  
+            <tbody>  
+                <!-- As linhas da tabela serão populadas dinamicamente com JavaScript -->
+            </tbody>  
+        </table>  
+        <button class="btn-incluir" onclick="window.location.href='cadastroprofessor.html'">Incluir Professor</button>  <!-- Botão para incluir professor -->
+    </main>  
+
+    <!-- Botão de voltar no canto inferior direito -->
+    <button class="btn-voltar" onclick="window.location.href='inicialadm.html'">VOLTAR</button>
+
+    <script src="/static/js/areaadmprofessores.js"></script>  <!-- Script JavaScript que controla a lógica da página -->
+</body>  
+</html>

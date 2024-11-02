@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Aluno</title>
+    <link rel="stylesheet" href="/static/css/perfilalunoadm.css"> <!-- Link para o CSS -->
+</head>
+
+<body>
+    <header>
+        <h1>Perfil do Aluno</h1>
+    </header>
+    <main>
+        <h2>Dados do Aluno</h2>
+        <div class="aluno-info">
+            <p><strong>ID:</strong> <span id="aluno-id"></span></p>
+            <p><strong>Nome:</strong> <span id="aluno-nome"></span></p>
+            <p><strong>Email:</strong> <span id="aluno-email"></span></p>
+            <p><strong>Data de Nascimento:</strong> <span id="aluno-data-nascimento"></span></p>
+            <p><strong>CPF:</strong> <span id="aluno-cpf"></span></p>
+            <p><strong>Data de Inscrição:</strong> <span id="aluno-data-inscricao"></span></p>
+            <p><strong>Status:</strong> <span id="aluno-status"></span></p>
+            <p><strong>Professor Responsável:</strong> <span id="aluno-professor"></span></p>
+        </div>
+        <button onclick="window.history.back()">Voltar</button> <!-- Botão para voltar -->
+    </main>
+    <script>
+        // Simulação de dados dos alunos
+        const alunos = [
+            { id: 1, nome: "Caio Guedes", email: "caio.guedes@email.com", dataNascimento: "1990-05-15", cpf: "123.456.789-00", dataInscricao: "2024-08-01", status: "Ativo", professor: "Carlos Oliveira" },
+            { id: 2, nome: "Thaissa Rodrigues", email: "thaissa.rodrigues@gmail.com", dataNascimento: "2001-03-20", cpf: "234.567.890-01", dataInscricao: "2024-08-10", status: "Ativo", professor: "Roberto Almeida" },
+            { id: 3, nome: "Lucas Sgalla", email: "lucas.sgalla@gmail.com", dataNascimento: "2000-03-24", cpf: "222.547.134-87", dataInscricao: "2023-09-09", status: "Ativo", professor: "Fernanda Lima" },
+            { id: 4, nome: "Luis Da Hora", email: "luisdahora@gmail.com", dataNascimento: "2001-03-25", cpf: "745.012.000.07", dataInscricao: "2024-05-10", status: "Ativo", professor: "Larissa Silva" },
+            { id: 5, nome: "Elisangela Silva", email: "Elisangelasilva@gmail.com", dataNascimento: "1994-03-01", cpf: "547.657.4669-03", dataInscricao: "2023-10-10", status: "Ativo", professor: "Carlos Oliveira" },
+            // Adicione mais alunos conforme necessário
+        ];
+
+        // Função para buscar aluno pelo ID
+        function buscarAlunoPorId(id) {
+            return alunos.find(aluno => aluno.id === parseInt(id));
+        }
+
+        // Função para carregar os dados do aluno na página
+        function carregarPerfil() {
+            const params = new URLSearchParams(window.location.search);
+            const alunoId = params.get('id');
+            const aluno = buscarAlunoPorId(alunoId);
+
+            if (aluno) {
+                document.getElementById('aluno-id').textContent = aluno.id;
+                document.getElementById('aluno-nome').textContent = aluno.nome;
+                document.getElementById('aluno-email').textContent = aluno.email;
+                document.getElementById('aluno-data-nascimento').textContent = aluno.dataNascimento;
+                document.getElementById('aluno-cpf').textContent = aluno.cpf;
+                document.getElementById('aluno-data-inscricao').textContent = aluno.dataInscricao;
+                document.getElementById('aluno-status').textContent = aluno.status;
+                document.getElementById('aluno-professor').textContent = aluno.professor;
+            } else {
+                alert('Aluno não encontrado!');
+            }
+        }
+
+        // Chama a função quando a página é carregada
+        document.addEventListener('DOMContentLoaded', carregarPerfil);
+
+    </script>
+</body>
+
+</html>

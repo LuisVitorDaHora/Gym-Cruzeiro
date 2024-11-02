@@ -1,0 +1,52 @@
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Área Meu Histórico - Aluno</title>  
+    <link rel="stylesheet" href="/static/css/area-aluno.css">  <!-- Link para o arquivo CSS que estiliza a página -->
+</head>  
+<body>  
+    <header>  
+        <h1>GYM CRUZEIRO</h1> <!-- Título principal da página -->
+    </header>  
+
+    <main>  
+        <table class="perfil-container">
+            <thead>
+                <tr>
+                    <th colspan="4">
+                        <h2>MEU PERFIL</h2> <!-- Subtítulo que indica a seção do perfil do aluno -->
+                    </th>
+                </tr>
+                <tr class="perfil-header">
+                    <th><h2>MEU PROFESSOR</h2></th> <!-- Nome do instrutor -->
+                    <th><h2>TREINO</h2></th> <!-- Nome do treino -->
+                    <th><h2>OBJETIVO</h2></th> <!-- Objetivo -->
+                    <th><h2>DATA DE INSCRIÇÃO</h2></th> <!-- Data de inscrição -->
+                </tr>
+            </thead>
+            <tbody class="perfil-linhas">
+                {% if resultados %}
+                    {% for resultado in resultados %}
+                        <tr>
+                            <td>{{ resultado[0] }}</td> <!-- Nome do instrutor -->
+                            <td>{{ resultado[1] }}</td> <!-- Nome do treino -->
+                            <td>{{ resultado[2] }}</td> <!-- Objetivo -->
+                            <td>{{ resultado[3] }}</td> <!-- Data de inscrição -->
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="4">Nenhuma informação disponível.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </main>  
+
+    <a class="btn-voltar" href="{{ url_for('inicialaluno', email=email) }}">Voltar</a>
+
+    <script src="/static/js/areaaluno.js"></script> <!-- Script JavaScript que controla a lógica da página -->
+</body>
+</html>

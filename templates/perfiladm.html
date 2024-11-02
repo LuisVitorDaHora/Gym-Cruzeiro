@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">  <!-- Define o conjunto de caracteres para a página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Responsividade para dispositivos móveis -->
+    <title>Perfil ADM</title>  <!-- Título da página -->
+    <link rel="stylesheet" href="/static/css/perfil-adm.css">  <!-- Link para o arquivo CSS de estilo -->
+</head>
+<body>
+    <div class="container">  <!-- Contêiner principal da página -->
+        <header>
+            <h1>GYM CRUZEIRO</h1>  <!-- Título do cabeçalho -->
+        </header>
+        <main>
+            <div class="profile">  <!-- Seção do perfil do usuário -->
+                <div class="avatar">  <!-- Seção do avatar -->
+                    <img src="/static/imgicons/adm.jpg" alt="Foto">  <!-- Foto do aluno -->
+                </div>
+                <div class="info">  <!-- Seção de informações do perfil -->
+                    <h2>Rafael</h2>  <!-- Nome do usuário -->
+                    <p>Administração</p>  <!-- Informações adicional -->
+                </div>
+            </div>
+            <form>  <!-- Início do formulário para editar informações -->
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="name">Nome</label>  <!-- Rótulo para o campo de nome -->
+                    <input type="text" id="name" name="name" value="Rafael">  <!-- Campo de entrada para o nome -->
+                    
+                </div>
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="cpf">CPF</label>  <!-- Rótulo para o campo de CPF -->
+                    <input type="text" id="cpf" name="cpf" value="***.***.***-***">  <!-- Campo de entrada para CPF -->
+                    
+                </div>
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="birthdate">Data de Nascimento</label>  <!-- Rótulo para o campo de data de nascimento -->
+                    <input type="date" id="birthdate" name="birthdate" value="1990-01-01">  <!-- Campo de entrada para data -->
+
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="email">  <span class="required">*</span>E-mail </label>
+                    <input type="email" id="email" name="email" value="rafael@example.com">  <!-- Campo de entrada para e-mail -->
+                    
+                </div>
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="phone"><span class="required">*</span>Telefone</label>  <!-- Rótulo para o campo de telefone -->
+                    <input type="tel" id="phone" name="phone" value="(11) 1234-5678">  <!-- Campo de entrada para telefone -->
+                </div>
+
+                <button type="submit">Salvar</button>  <!-- Botão para enviar o formulário -->
+            </form>
+        </main>
+    </div>
+    <script src="/static/js/script perfiladm.js"></script>  <!-- Link para o arquivo JavaScript -->
+</body>
+</html>
+
+
+

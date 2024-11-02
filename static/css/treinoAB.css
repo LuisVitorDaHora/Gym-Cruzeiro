@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fundo escuro */
+    color: #f4f4f4; /* Texto claro */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    color: #ff6600; /* Laranja para o título */
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #1e1e1e; /* Cor dos cards */
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 90%;
+    max-width: 400px;
+    color: #f4f4f4;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #ff6600; /* Destaque laranja ao passar o mouse */
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ff6600; /* Títulos dos cards em laranja */
+}
+
+p {
+    margin: 10px 0;
+    color: #b3b3b3; /* Texto secundário em cinza claro */
+}
+
+.view-details {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #121212;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.view-details:hover {
+    background-color: #e65c00; /* Laranja mais escuro ao passar o mouse */
+    color: #fff;
+}
+
+.back-button {
+    display: inline-block;
+    margin: 20px auto;
+    background-color: #333;
+    color: #ff6600;
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid #ff6600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #ff6600;
+    color: #121212;
+}

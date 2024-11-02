@@ -1,0 +1,137 @@
+
+/* PÁGINA PERFIL DO PROFESSOR */
+
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: #121212;  
+    color: #FFFFFF;  
+  }  
+  
+  /* contêiner principal */
+  .container {  
+    max-width: 800px;   
+    margin: 40px auto;  
+    padding: 20px;  
+    background-color: #222;  
+    border: 1px solid #444;
+  }  
+  
+  .required {
+    color: red; /* Cor do asterisco */
+    font-weight: bold; /* Deixa o asterisco em negrito */
+  }
+  
+  /* Estiliza o cabeçalho */
+  header {  
+    background-color: #000;
+    color: #FFF;   
+    padding: 10px; 
+    text-align: center;  
+    border-bottom: 2px solid #e98e33;  
+  }  
+  
+   
+  header h1 {  
+    font-size: 24px;   
+    margin-bottom: 10px;   
+  }  
+  
+  /* Estiliza a seção principal */
+  main {  
+    padding: 20px;  
+  }  
+  
+   
+  .profile {  
+    display: flex; 
+    align-items: center;  
+    margin-bottom: 20px;   
+  }  
+  
+  /* Estiliza o avatar do usuário */
+  .avatar {  
+    width: 100px;   
+    height: 100px;  
+    border-radius: 50%;  
+    margin-right: 20px; 
+  }  
+  
+   
+  .avatar img {  
+    width: 100%;   
+    height: 100%;  
+    border-radius: 50%;  
+  }  
+  
+   
+  .info {  
+    flex: 1;  
+  }  
+  
+  /* Estiliza o título das informações do perfil */
+  .info h2 {  
+    font-size: 18px;  
+    margin-bottom: 10px;  
+  }  
+  
+  .info p {  
+    font-size: 14px;  
+    margin-bottom: 10px;  
+  }  
+  
+  /* Estiliza o formulário */
+  form {  
+    margin-top: 20px;  
+  }  
+  
+   
+  .form-group {  
+    margin-bottom: 20px;  
+  }  
+  
+  
+  .form-group label {  
+    display: block;
+    margin-bottom: 10px;
+    color: #e98e33;  
+  }
+  
+   
+  .form-group input[type="text"], 
+  .form-group input[type="email"], 
+  .form-group input[type="tel"],
+  input[type="date"] {  
+    width: 100%;   
+    padding: 10px;  
+    margin-bottom: 10px;  
+    border: 1px solid #555; 
+    border-radius: 5px; 
+    background-color: #333; 
+    color: #fff;  
+  }  
+  
+  
+  /* Estiliza o ícone de edição */
+  .edit-icon {  
+    display: inline-block;  
+    width: 20px;   
+    height: 20px;   
+    background-color: #333; 
+    border-radius: 50%;  
+    cursor: pointer;  /* Muda o cursor ao passar o mouse sobre o ícone */
+  }  
+  
+  /* Estiliza o botão de envio do formulário */
+  button[type="submit"] {  
+    background-color: #e98e33;  
+    color: #FFF;  
+    padding: 10px 20px;  
+    border-radius: 5px; 
+    cursor: pointer;   
+  }  
+  
+  /* Estiliza o botão de envio ao passar o mouse */
+  button[type="submit"]:hover {  
+    background-color: #ffad33;  /* Muda a cor de fundo do botão quando o mouse passa sobre ele */
+  }  
+  

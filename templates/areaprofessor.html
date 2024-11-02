@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+<html lang="pt-BR">  
+<head>  
+    <meta charset="UTF-8">  <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Ajusta a visualização em dispositivos móveis -->
+    <title>Área Histórico - Professor</title>  <!-- Título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="/static/css/area-professor.css">  <!-- Link para o arquivo CSS para estilização da página -->
+</head>  
+<body>  
+    <header>  
+        <h1>GYM CRUZEIRO</h1>  <!-- Cabeçalho principal da página com o nome da academia -->
+    </header>  
+    <main>  
+        <h2>ALUNOS</h2>  <!-- Subtítulo que indica a seção dos alunos -->
+        <table id="alunosTable">  <!-- Tabela para exibir informações dos alunos -->
+            <thead>  
+                <tr>  
+                    <th>NOME</th>  <!-- Coluna para o nome do aluno -->
+                    <th>TREINO</th>  <!-- Coluna para o tipo de treino do aluno -->
+                    <th>OBJETIVO</th>  <!-- Coluna para o objetivo do aluno (ex: emagrecimento, ganho de massa) -->
+                    <th>PERÍODO</th>  <!-- Coluna para o período de treino do aluno -->
+                    <th>NOVA AVALIAÇÃO</th>  <!-- Coluna para a data ou status da nova avaliação -->
+                </tr>  
+            </thead>  
+            <tbody>  
+                <!-- As linhas da tabela serão populadas dinamicamente com JavaScript -->  
+                <!-- Cada linha representará um aluno e suas informações correspondentes -->
+            </tbody>  
+        </table>  
+        
+    </main>  
+    
+    <!-- Botão de voltar no canto inferior direito -->
+    <button class="btn-voltar" onclick="window.location.href='inicialprofessor.html'">VOLTAR</button>
+
+    <script src="/static/js/script areaprofessor.js"></script>  <!-- Link para o arquivo JavaScript que gerencia a funcionalidade da página -->
+</body>  
+</html>
+

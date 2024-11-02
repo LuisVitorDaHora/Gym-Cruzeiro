@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a página para ser responsiva -->
+    <title>Criar Novo Exercício</title> <!-- Título da página exibido na aba do navegador -->
+    <link rel="stylesheet" href="/static/css/criar-exercicio.css"> <!-- Link para o arquivo de estilos CSS externo -->
+</head>
+
+<body>
+    <div class="container"> <!-- Contêiner principal da página -->
+        <header>
+            <h1>Novo Exercício</h1> <!-- Título principal da página -->
+            <h2>GYM CRUZEIRO</h2> <!-- Subtítulo da página -->
+        </header>
+        <main>
+            <form> <!-- Início do formulário de criação de exercício -->
+                <div class="image-upload">
+                    <input type="file" id="image" accept="image/*" style="display: none;">
+                    <!-- Oculta o campo de upload real -->
+                    <label for="image" class="upload-button">Inserir imagem</label> <!-- Botão de upload -->
+
+                    <div class="image-preview-container">
+                        <img id="image-preview" src="" alt="Preview da Imagem" style="display:none;">
+                    </div>
+                </div>
+                <div class="form-fields"> <!-- Campos do formulário -->
+                    <label for="category">CATEGORIA DO EXERCÍCIO</label> <!-- Rótulo para o campo de categoria -->
+                    <input type="text" id="category" name="category"> <!-- Campo de texto para inserir a categoria -->
+                    <label for="name">NOME DO EXERCÍCIO</label> <!-- Rótulo para o campo de nome do exercício -->
+                    <input type="text" id="name" name="name"> <!-- Campo de texto para inserir o nome do exercício -->
+                    <label for="description">DESCRIÇÃO DO EXERCÍCIO</label> <!-- Rótulo para o campo de descrição -->
+                    <textarea id="description" name="description"></textarea>
+                    <!-- Área de texto para inserir a descrição -->
+                </div>
+
+                <!-- Botões abaixo do formulário -->
+                <div class="form-buttons"> <!-- Div que contém os botões do formulário -->
+                    <button type="submit" class="btn-criar">Criar Novo Exercício</button>
+                    <!-- Botão para criar novo exercício -->
+                    <button type="button" class="btn-voltar"
+                        onclick="window.location.href='inicialprofessor.html'">Voltar</button>
+                    <!-- Botão para voltar à página anterior -->
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="/static/js/criarexercicio.js"></script> <!-- Script JavaScript externo -->
+</body>
+
+</html>

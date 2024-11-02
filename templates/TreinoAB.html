@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Aluno</title>
+    <link rel="stylesheet" href="/static/css/treinoAB.css">
+</head>
+<body>
+    <header>
+        <h1>Exercícios</h1>
+    </header>
+
+    <main class="container">
+        <div id="exercise-container">
+            <!-- Os exercícios serão inseridos aqui dinamicamente -->
+        </div>
+    </main>
+
+    <a href="TreinoAluno.html" class="back-button">Voltar para Treinos</a>
+
+    <script>
+        const trainings = {
+            1: [
+                { 
+                    id: 1, 
+                    title: "Rosca Direta (Barra) – 3x10", 
+                    description: "Fique em pé com uma barra nas mãos, braços estendidos. Flexione os cotovelos para levantar a barra em direção ao peito, mantendo os cotovelos fixos.",
+                    image: "path/to/image1.jpg", 
+                    available: true 
+                },
+                { 
+                    id: 2, 
+                    title: "Tríceps Pulley (Corda) – 3x12", 
+                    description: "Usando um aparelho de cabo alto (pulley), segure uma corda ou barra e puxe para baixo até os cotovelos estarem totalmente estendidos.", 
+                    image: "path/to/image2.jpg", 
+                    available: true
+
+                },
+                { 
+                    id: 3, 
+                    title: "Elevação Lateral (Halteres) – 3x12", 
+                    description: "Segure halteres ao lado do corpo, levante os braços para os lados até a altura dos ombros e abaixe lentamente.",
+                    image: "path/to/image3.jpg",
+                    available: true 
+                },
+                { 
+                    id: 4, 
+                    title: "	Supino Reto (Barra ou Halteres) – 4x8-10", 
+                    description: "Deitado em um banco plano, segure uma barra ou halteres com as mãos afastadas na largura dos ombros e empurre o peso para cima até que os braços estejam totalmente estendidos.",
+                    image: "path/to/image3.jpg",
+                    available: true 
+                },
+                { 
+                    id: 5, 
+                    title: "Corrida ou Caminhada na Esteira – 30 minutos", 
+                    description: "A corrida e a caminhada são ótimas opções para o treino de cardio. Variar entre corrida rápida, trote e caminhada inclina a intensidade e desafia a resistência.",
+                    image: "path/to/image3.jpg",
+                    available: true 
+                }
+                // Adicione mais exercícios conforme necessário
+            ],
+
+            2: [
+                { 
+                    id: 1, 
+                    title: "Remada Curvada (Barra) – 3x10", 
+                    description: "Segure uma barra com as mãos afastadas na largura dos ombros, incline o tronco para frente, mantendo as costas retas, e puxe a barra em direção ao abdômen.", 
+                    image: "path/to/image2.jpg", 
+                    available: true
+
+                },
+                { 
+                    id: 2, 
+                    title: "Agachamento Livre (Back Squat) – 4x8", 
+                    description: "Com uma barra apoiada nas costas (trapézio), desça em um movimento de agachamento até que as coxas fiquem paralelas ao chão e depois suba. Mantendo o peso nos calcanhares, o foco é nos quadríceps.",
+                    image: "path/to/image3.jpg",
+                    available: true 
+                },
+                { 
+                    id: 3, 
+                    title: "Levantamento Terra Romeno (Romanian Deadlift) – 3x10", 
+                    description: "Com uma barra ou halteres nas mãos, mantenha os joelhos levemente flexionados e desça o peso em direção aos pés, sentindo o alongamento nos isquiotibiais. Depois, retorne à posição ereta, contraindo os isquiotibiais e glúteos.",
+                    image: "path/to/image3.jpg",
+                    available: true 
+                },
+                { 
+                    id: 4, 
+                    title: "Cadeira Flexora – 3x12", 
+                    description: "Sentado ou deitado em uma máquina de flexora, flexione os joelhos para trazer o apoio em direção aos glúteos, focando em contrair os isquiotibiais.",
+                    image: "path/to/image3.jpg",
+                    available: true 
+                },
+                { 
+                    id: 5, 
+                    title: "Elevação de Panturrilha Sentado – 3x15-20", 
+                    description: "Sentado em uma máquina específica ou com pesos nos joelhos, levante os calcanhares, ficando na ponta dos pés, e retorne à posição inicial. Este exercício foca no músculo sóleo.",
+                    image: "path/to/image3.jpg",
+                    available: true 
+                },
+                { 
+                    id: 5, 
+                    title: "Pular Corda – 300 repetições", 
+                    description: "Um exercício simples, mas eficiente. Pular corda melhora a coordenação, trabalha o condicionamento cardiovascular e ajuda na queima de calorias.",
+                    image: "path/to/image3.jpg",
+                    available: true 
+                }
+                // Adicione mais exercícios conforme necessário
+            ],
+        };
+
+        function getTrainingIdFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('trainingId');
+        }
+
+        function renderExercises() {
+            const exerciseContainer = document.getElementById('exercise-container');
+            exerciseContainer.innerHTML = '';
+
+            const trainingId = getTrainingIdFromURL();
+            const exercises = trainings[trainingId] || [];
+
+            exercises.forEach(exercise => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+
+                if (exercise.available) {
+                    card.innerHTML = `
+                        <h3>${exercise.title}</h3>
+                        <img src="${exercise.image}" alt="${exercise.title}" class="exercise-image">
+                        <p>${exercise.description}</p>
+                    `;
+                } else {
+                    card.innerHTML = `
+                        <h3>${exercise.title}</h3>
+                        <img src="${exercise.image}" alt="${exercise.title}" class="exercise-image">
+                        <p>${exercise.description}</p>
+                    `;
+                }
+
+                exerciseContainer.appendChild(card);
+            });
+        }
+
+        window.onload = renderExercises;
+    </script>
+</body>
+</html>

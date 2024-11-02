@@ -1,0 +1,83 @@
+/* PERFIL ALUNO ADM*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;  
+    color: white;  
+}
+
+header {
+    text-align: center; 
+    padding: 20px;
+    background-color: #444; 
+}
+
+main {
+    padding: 20px; 
+}
+
+/* estilo da tabela */
+table {
+    width: 100%;  
+    border-collapse: collapse;  
+    margin: 20px 0;   
+}
+
+
+
+th {
+    background-color: #ff6600;  
+    color: white;  /* Cor do texto dos cabeçalhos */
+    padding: 10px;  /* Preenchimento interno */
+    text-align: left;   
+}
+
+/* Estilo para as células da tabela */
+td {
+    border: 1px solid #afafaf;  /* Borda leve ao redor das células */
+    padding: 8px; 
+}
+
+tr:hover {
+    background-color: rgb(77, 76, 76);  /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para o link do nome do aluno */
+td a {
+    color: #ff6600;  /* Cor do texto do link */
+    text-decoration: none;  /* Remove o sublinhado padrão */
+    font-weight: bold;  /* Texto em negrito */
+}
+
+/* Efeito ao passar o mouse sobre o link */
+td a:hover {
+    text-decoration: underline;   
+}
+
+.btn-voltar {
+    background-color:  #e98e33;  
+    color: #ffffff; 
+    text-decoration: none; /* Remove o sublinhado */
+    border: none;  
+    border-radius: 5px;  
+    padding: 10px 20px;  
+    cursor: pointer;  
+    transition: background-color 0.3s;
+    display: inline-block; /* Faz o link parecer um botão */
+}
+
+
+.btn-voltar:hover {
+    background-color: #f8cf7c;  
+}
+
+.separator {
+    height: 1px; 
+    background-color: #555; 
+    margin: 20px 0; 
+}

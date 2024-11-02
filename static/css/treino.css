@@ -1,0 +1,97 @@
+/* TREINO */
+
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: #1a1a1a;  
+    margin: 0;
+    padding: 0;
+}  
+
+.header {  
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}  
+
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #f8f4f4;   
+}  
+
+.title-container {  
+    background-color: #333;  
+    text-align: center; 
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.title-container h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #ff6600  
+}
+
+.main-container {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: flex-start; 
+    padding: 20px;  
+    color: #f8f4f4;  
+}  
+
+#treinos-list {  
+    list-style: none;  
+    padding: 0;  
+    margin: 0;  
+    width: 100%;  
+}  
+
+#treinos-list li {  
+    display: flex;  
+    justify-content: space-between;  
+    padding: 10px;  
+    border-bottom: 1px solid #444;  
+    width: 100%;
+}  
+
+#treinos-list li:last-child {  
+    border-bottom: none;  
+}  
+
+.button-container {  
+    display: flex;  
+    justify-content: flex-start; 
+    padding: 20px 0;  
+    width: 100%;
+}  
+
+#add-treino-button {  
+    background-color: #e98e33;
+    color: #fff;  
+    padding: 10px 20px;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    margin-right: 10px; 
+    transition: background-color 0.3s;
+}  
+
+#add-treino-button:hover {
+    background-color: #e65c00;
+  }
+
+.back-button {  
+    background-color: #e98e33; 
+    color: #fff;  
+    padding: 10px 20px;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    margin-right: 10px; 
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #e65c00;
+  }

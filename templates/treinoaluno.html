@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Treinos Definidos</title>
+   <link rel="stylesheet" href="/static/css/TreinoAluno.css">
+</head>
+<body>
+    <header>
+        <h1>Treinos do Aluno</h1>
+    </header>
+
+    <main class="container">
+        <div id="training-container">
+            <!-- Os treinos serão inseridos aqui dinamicamente -->
+        </div>
+    </main>
+
+    <a href="inicialaluno.html" class="back-button">Área inicial</a>
+
+    <script>
+        const trainings = [
+            { id: 1, name: "Treino A" },
+            { id: 2, name: "Treino B" },
+        ];
+
+        function renderTrainings() {
+            const trainingContainer = document.getElementById('training-container');
+            trainingContainer.innerHTML = '';
+
+            trainings.forEach(training => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+                card.innerHTML = `
+                    <h3>${training.name}</h3>
+                    <a href="TreinoAB.html?trainingId=${training.id}" class="view-details">Ver Exercícios</a>
+                `;
+                trainingContainer.appendChild(card);
+            });
+        }
+
+        window.onload = renderTrainings;
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Treinos Definidos</title>
+   <link rel="stylesheet" href="TreinoAluno.css">
+</head>
+<body>
+    <header>
+        <h1>Treinos do Aluno</h1>
+    </header>
+
+    <main class="container">
+        <div id="exercise-container">
+             Os cards de exercícios serão inseridos aqui dinamicamente 
+        </div>
+    </main>
+
+    <a href="inicialaluno (1).html" class="back-button">Area inicial</a>
+
+    <script>
+        const trainings = [
+            {
+                name: "Bíceps",
+                exercises: [
+                    {
+                        id: 1,
+                        title: "Rosca Direta",
+                        subtitle: "Rosca Direta (Barra)",
+                        description: "Fique em pé com uma barra nas mãos, braços estendidos. Flexione os cotovelos para levantar a barra em direção ao peito, mantendo os cotovelos fixos.",
+                        image: "C:/Users/thais/Downloads/templates (1)-20241016T204324Z-001_7/templates (1)/Site Gym Cruzeiro (1)/imgicons (1)/rosca direta.png",
+                        available: true // Esse está liberado para demostração 
+                    },
+                    {
+                        id: 2,
+                        title: "Rosca Alternada",
+                        subtitle: "Rosca Alternada (Halteres)",
+                        description: "Com os halteres nas mãos, levante um de cada vez em um movimento alternado, flexionando o cotovelo e trazendo o haltere em direção ao ombro.",
+                        image: "templates (1)/Site Gym Cruzeiro (1)/imgicons (1)/rosca alternada.jpeg",
+                        available: false,
+                        waitTime: 24 
+                    }
+                ]
+            },
+        ];
+
+        function renderExercises() {
+            const exerciseContainer = document.getElementById('exercise-container');
+            exerciseContainer.innerHTML = '';
+
+            trainings.forEach(training => {
+                training.exercises.forEach(exercise => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+
+                    // Verifica se o exercício está disponível
+                    if (exercise.available) {
+                        card.innerHTML = `
+                            <img src="${exercise.image}" alt="${exercise.subtitle}">
+                            <h3>${exercise.title}</h3>
+                            <p>${exercise.subtitle}</p>
+                            <button class="view-details" data-id="${exercise.id}" data-group="${training.name}">Ver Detalhes</button>
+                        `;
+                    } else {
+                        card.innerHTML = `
+                            <h3>${exercise.title}</h3>
+                            <p>Este treino ainda não está disponível.</p>
+                            <p>Por favor, aguarde até ${exercise.waitTime} horas para a liberação.</p>
+                        `;
+                    }
+
+                    exerciseContainer.appendChild(card);
+                });
+            });
+
+            document.querySelectorAll('.view-details').forEach(button => {
+                button.addEventListener('click', function () {
+                    const exerciseId = this.getAttribute('data-id');
+                    const groupName = this.getAttribute('data-group');
+                    showDetails(groupName, exerciseId);
+                });
+            });
+        }
+
+        function showDetails(trainingName, exerciseId) {
+    const selectedTraining = trainings.find(t => t.name === trainingName);
+    const exercise = selectedTraining.exercises.find(e => e.id == exerciseId);
+
+    const content = `
+        <div class="exercise-details">
+            <div class="exercise-image-container">
+                <img src="${exercise.image}" alt="${exercise.subtitle}">
+            </div>
+            <div class="exercise-info">
+                <h1>${exercise.title}</h1>
+                <h4>${exercise.subtitle}</h4>
+                <p>${exercise.description}</p>
+                <button class="back-button" onclick="renderExercises()">Voltar</button>
+            </div>
+        </div>
+    `;
+
+    document.getElementById('exercise-container').innerHTML = content;
+}
+
+        window.onload = renderExercises;
+    </script>
+</body>
+</html> -->

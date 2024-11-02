@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">  <!-- Define o conjunto de caracteres para a página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Responsividade para dispositivos móveis -->
+    <title>Meu Perfil Aluno</title>  <!-- Título da página -->
+    <link rel="stylesheet" href="/static/css/perfil-aluno.css">  <!-- Link para o arquivo CSS de estilo -->
+</head>
+<body>
+    <div class="container">  <!-- Contêiner principal da página -->
+        <header>
+            <h1>GYM CRUZEIRO</h1>  <!-- Título do cabeçalho -->
+        </header>
+        <main>
+            <div class="profile">  <!-- Seção do perfil do usuário -->
+                <div class="avatar">  <!-- Seção do avatar -->
+                    <img src="/static/imgicons/feminino.jpg" alt="Foto">  <!-- Foto do aluno -->
+                </div>
+                <div class="info">  <!-- Seção de informações do perfil -->
+                    <h2>{{ nome }}</h2>  <!-- Nome do usuário passado do Flask -->
+                    <p>{{ genero }}</p>  <!-- Informações adicionais (gênero e idade) -->
+                </div>
+            </div>
+            <form action="/perfil_aluno_submit" method="POST">  <!-- Início do formulário para editar informações -->
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="name">Nome</label>  <!-- Rótulo para o campo de nome -->
+                    <input type="text" id="name" name="name" value="{{ nome }}">  <!-- Campo de entrada para o nome -->
+                </div>
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="cpf">CPF</label>  <!-- Rótulo para o campo de CPF -->
+                    <input type="text" id="cpf" name="cpf" value="{{ cpf }}">  <!-- Campo de entrada para CPF -->
+                </div>
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="birthdate">Data de Nascimento</label>  <!-- Rótulo para o campo de data de nascimento -->
+                    <input type="date" id="birthdate" name="birthdate" value="{{ dt_nasc }}">  <!-- Campo de entrada para data -->
+                </div>
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="gender">Gênero</label>  <!-- Rótulo para o campo de gênero -->
+                    <input type="text" id="gender" name="gender" value="{{ genero }}">  <!-- Campo de entrada para gênero -->
+                </div>
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="email"><span class="required">*</span>E-mail </label>  <!-- Rótulo para o campo de e-mail -->
+                    <input type="email" id="email" name="email" value="{{ email }}">  <!-- Campo de entrada para e-mail -->
+                </div>
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="phone"><span class="required">*</span>Telefone</label> <!-- Rótulo para o campo de telefone -->
+                    <input type="tel" id="phone" name="phone" value="{{ telefone }}">  <!-- Campo de entrada para telefone -->
+                </div>
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="address"><span class="required">*</span>Endereço</label>  <!-- Rótulo para o campo de endereço -->
+                    <input type="text" id="address" name="address" value="{{ endereco }}">  <!-- Campo de entrada para endereço -->
+                </div>
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="altura"><span class="required">*</span>Altura</label>  <!-- Rótulo para o campo de altura -->
+                    <input type="text" id="height" name="height" value="{{ altura }}">  <!-- Campo de entrada para altura -->
+                </div>   
+                <div class="form-group">  <!-- Grupo de campos do formulário -->
+                    <label for="weight"><span class="required">*</span>Peso</label>  <!-- Rótulo para o campo de peso -->
+                    <input type="text" id="weight" name="weight" value="{{ peso }}">  <!-- Campo de entrada para peso -->
+                </div>                
+                <button type="submit">Salvar</button>  <!-- Botão para enviar o formulário -->
+            </form>
+        </main>
+    </div>
+    <script src="/static/js/script perfilaluno.js"></script>  <!-- Link para o arquivo JavaScript -->
+</body>
+</html>

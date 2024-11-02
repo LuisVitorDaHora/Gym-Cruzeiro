@@ -1,0 +1,165 @@
+ /* Estilos do corpo */
+ body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Estilos do contêiner principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos do título */
+h1 {
+    text-align: center;
+}
+
+/* Estilos do contêiner dos cards */
+#exercise-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte, se necessário */
+    justify-content: center;
+}
+
+/* Estilos do card */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    flex: 1 1 200px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos da imagem */
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Estilos dos títulos dentro do card */
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+/* Estilos para o subtítulo */
+.card p {
+    margin: 5px 0;
+}
+
+/* Estilos do botão */
+.view-details {
+    background-color: #ff6600;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-details:hover {
+    background-color: #e55b00; /* Cor do botão ao passar o mouse */
+}
+
+/* Estilos para os detalhes do exercício */
+.exercise-details {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos para a imagem nos detalhes do exercício */
+.exercise-details img {
+    max-width: 40%;
+    height: auto;
+    margin: 10px 0;
+}
+
+
+/* Estilos para os detalhes do exercício */
+.exercise-details {
+    display: flex;  
+    flex-direction: row;  
+    justify-content: center;  
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e1e; 
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    margin-top: 30px;
+}
+
+
+.exercise-details {
+    display: flex;
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;
+    padding: 20px;
+    background-color: #1e1e1e; 
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    margin-top: 30px;
+    max-width: 800px;  
+    margin: 30px auto; 
+}
+
+/* Estilos para a imagem no contêiner dos detalhes */
+
+.exercise-details img {
+    width: 60%;  /* Tamanho da imagem */
+    height: auto;  
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 20px; 
+}
+
+/* Estilos para as informações do exercício */
+.exercise-details h1 {
+    font-size: 2em;
+    color: #ff6600;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.exercise-details h4 {
+    font-size: 1.5em;
+    color: #f4f4f4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.exercise-details p {
+    font-size: 1.2em;
+    color: #f4f4f4;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o botão de voltar */
+.back-button {
+    background-color: #ff6600;  
+    text-decoration: none; 
+    color: #ffffff; 
+    border: none;  
+    border-radius: 5px;  
+    padding: 10px 20px;  
+    cursor: pointer;  
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #e55b00;
+}

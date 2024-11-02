@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #353535; /* Cor de fundo escura */
+    margin: 0;
+    padding: 20px;
+    color: #f4f4f4; /* Cor do texto clara */
+}
+
+header {
+    background-color: #ff6600; /* Cor laranja */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: #ff6600; /* Cor laranja para o subtítulo */
+}
+
+.aluno-info {
+    background-color: #1e1e1e; /* Fundo escuro para informações do aluno */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra mais forte */
+}
+
+p {
+    margin: 10px 0; /* Espaçamento entre parágrafos */
+    color: #f4f4f4; /* Cor do texto para os parágrafos */
+}
+
+button {
+    background-color: #ff8400; /* Cor azul para botão */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f6aa4f; /* Cor mais escura ao passar o mouse */
+}

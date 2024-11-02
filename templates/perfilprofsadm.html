@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Professor</title>
+    <link rel="stylesheet" href="/static/css/perfilprofsadm.css"> <!-- Link para o CSS -->
+</head>
+
+<body>
+    <header>
+        <h1>GYM CRUZEIRO</h1>
+    </header>
+    <main>
+        <h2>Perfil do Professor</h2>
+        <div class="professor-info">
+            <!-- As informações do professor serão inseridas aqui dinamicamente -->
+        </div>
+        <button class="btn-voltar" onclick="window.history.back()">VOLTAR</button>
+    </main>
+
+    <script>
+        // Dados simulados de professores (substitua pela busca real do banco de dados)
+        const professores = [
+            { id: 1, nome: "Carlos Oliveira", especialidade: "Musculação", email: "profcarlos.oliveira@gym.com", CPF: "114.548.987-12",  dataContratacao: "2020-01-15", status: "Ativo" },
+            { id: 2, nome: "Roberto Almeida", especialidade: "Musculação", email: "profroberto.almeida@gym.com", CPF: "459.214.364-19", dataContratacao: "2021-02-10", status: "Ativo" },
+            { id: 3, nome: "Fernanda Lima", especialidade: "HIIT", email: "proffernada.lima@gym.com", CPF: "968.673.333.34", dataContratacao: "2019-04-12", status: "Ativo" },
+            { id: 4, nome: "Larissa Silva", especialidade: "Musculação", email: "proflarissa.silva@gym.com", CPF: "002.015.784-00", dataContratacao: "2023-10-01", status: "Ativo" },
+        ];
+
+        // Função para carregar as informações do professor
+        function carregarProfessor() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const professorId = parseInt(urlParams.get('id')); // Obtém o ID do professor da URL
+            const professor = professores.find(p => p.id === professorId); // Busca o professor correspondente
+
+            // Seleciona a div para exibir as informações do professor
+            const professorInfoDiv = document.querySelector('.professor-info');
+
+            if (professor) {
+                // Insere as informações do professor
+                professorInfoDiv.innerHTML = `
+            <p><strong>ID:</strong> ${professor.id}</p>
+            <p><strong>Nome:</strong> ${professor.nome}</p>
+            <p><strong>Especialidade:</strong> ${professor.especialidade}</p>
+            <p><strong>Email:</strong> ${professor.email}</p>
+            <p><strong>CPF:</strong> ${professor.CPF}</p>
+            <p><strong>Data de Contratação:</strong> ${professor.dataContratacao}</p>
+            <p><strong>Status:</strong> ${professor.status}</p>
+        `;
+            } else {
+                professorInfoDiv.innerHTML = '<p>Professor não encontrado.</p>';
+            }
+        }
+
+        // Chama a função quando a página é carregada
+        document.addEventListener('DOMContentLoaded', carregarProfessor);
+
+    </script> <!-- Link para o JavaScript -->
+</body>
+
+</html>

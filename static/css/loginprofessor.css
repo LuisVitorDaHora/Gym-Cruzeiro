@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Fundo escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #f4f4f4; /* Texto claro */
+}
+
+.login-container {
+    background-color: #333; /* Fundo mais escuro para o contêiner */
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 50px rgba(255, 160, 88, 0.192); /* Sombra mais escura */
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    color: #ff6600; /* Laranja */
+}
+
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #f4f4f4; /* Texto claro para o rótulo */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0.5rem;
+    border: 1px solid #555; /* Bordas mais escuras */
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #444; /* Fundo escuro para os campos */
+    color: #f4f4f4; /* Texto claro nos campos */
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #ff6600; 
+    outline: none;
+}
+
+.btn-login {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #e65c00;
+}
+
+.register-text {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #f4f4f4; /* Texto claro */
+}
+
+.register-text a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.register-text a:hover {
+    color: #e65c00;
+}
+
+footer {
+    background-color: #000000a6;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}

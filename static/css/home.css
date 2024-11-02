@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c; /* Fundo mais escuro */
+    color: #f4f4f4; /* Texto claro para contraste */
+}
+
+header {
+    background-color: #ff6600;
+    padding: 1rem;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 2rem;
+    color: white;
+}
+
+nav {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+#banner {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+#banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#banner p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#banner .btn-login {
+    background-color: #e98e33; /* Cor de fundo laranja */
+    color: #fff; /* Texto claro */
+    padding: 12px 20px; /* Aumenta o padding para maior tamanho */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    cursor: pointer; /* Cursor que indica que é clicável */
+    transition: background-color 0.3s; /* Transição suave de cor */
+    margin: 10px; /* Margem entre botões, se houver mais */
+}
+
+#banner .btn-login:hover {
+    background-color: #e65c00;
+}
+
+#treinos {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: #2b2b2b; /* Fundo mais escuro */
+}
+
+#treinos h2 {
+    margin-bottom: 3rem;
+    color: #ff6600; /* Título em laranja */
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #333; /* Fundo mais escuro */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.card h3 {
+    color: #ff6600;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    margin-bottom: 1rem;
+    color: #ccc; /* Texto mais claro */
+}
+
+.card .btn-cadastro {
+    background-color: #e98e33; /* Cor de fundo laranja */
+    color: #fff; /* Texto claro */
+    padding: 12px 20px; /* Aumenta o padding para maior tamanho */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Cantos arredondados */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    cursor: pointer; /* Cursor que indica que é clicável */
+    transition: background-color 0.3s; /* Transição suave de cor */
+    margin: 10px; /* Margem entre botões, se houver mais */
+}
+
+.card .btn-cadastro:hover {
+    background-color: #e65c00;
+}
+
+/* Sobre */
+.sobre {
+    background-color: #1c1c1c; /* Fundo escuro */
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.sobre h2 {
+    margin-bottom: 2rem;
+    color: #ff6600; /* Título em laranja */
+}
+
+.sobre p {
+    color: #ccc;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
+/* Contato */
+.contact {
+    background-color: #2b2b2b; /* Fundo mais escuro */
+    padding: 4rem 1rem;
+    color: #ccc;
+}
+
+.contact .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-info,
+.company,
+.social {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contact-info ul,
+.company ul,
+.social ul {
+    list-style: none;
+}
+
+.contact-info h2,
+.company h3,
+.social h3 {
+    color: #ff6600;
+    margin-bottom: 1rem;
+}
+
+.contact-info ul li,
+.company ul li,
+.social ul li {
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+.contact-info ul li img {
+    margin-right: 0.5rem;
+}
+
+.company ul li a,
+.social ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.company ul li a:hover,
+.social ul li a:hover {
+    color: #ff6600;
+}
+
+footer {
+    background-color: #000000a6;
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+

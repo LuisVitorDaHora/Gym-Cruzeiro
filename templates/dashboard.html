@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Progresso</title>
+    <link rel="stylesheet" href="/static/css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Resumo de Progresso </h1>
+    </header>
+
+    
+    <main>
+        <section class="progress-summary">
+            <a href="inicialaluno.html" class="back-button">Voltar</a>
+            <h2>Resumo Geral</h2>
+            <div class="progress-cards">
+                <div class="card">
+                    <h3>Treinos Concluídos</h3>
+                    <p id="total-treinos">45</p>
+                </div>
+                <div class="card">
+                    <h3>Peso Atual</h3>
+                    <p id="peso-atual">72kg</p>
+                </div>
+                <div class="card">
+                    <h3>Ganho de Massa</h3>
+                    <p id="ganho-massa">3kg</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="progress-graph">
+            <h2>Evolução dos Treinos</h2>
+            <canvas id="myChart"></canvas>
+        </section>
+    </main>
+
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        
+        // Dados iniciais do gráfico
+        const data = {
+            labels: ['Janeiro', 'Abril', 'Julho', 'Outubro'], // Meses do progresso
+            datasets: [{
+                label: 'Ganho de Massa (kg)', 
+                data: [1, 1.5, 2, 2.5, 2.8, 3], // Ganho de massa em kg
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1,
+                fill: true
+            }]
+        };
+
+        const myChart = new Chart(ctx, {
+            type: 'line',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Ganho de Massa (kg)', 
+                            color: '#f4f4f4',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Meses', 
+                            color: '#f4f4f4',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Simulação de atualização dos dados a cada 3 meses (usando 3 segundos)
+        const newDataSets = [
+            [1.2, 1.5, 2.0, 2.2], // Simulação de nova série de dados
+            [1.5, 2, 2.6, 3.2],  // Nova série após 3 "meses"
+            [2, 2.5, 3, 3.5]     // Última simulação
+        ];
+
+        let updateCount = 0;
+
+        setInterval(() => {
+            if (updateCount < newDataSets.length) {
+                myChart.data.datasets[0].data = newDataSets[updateCount];
+                myChart.update(); // Atualiza o gráfico visualmente na atualização da pagina 
+                
+                updateCount++;
+            }
+        }, 3000); // 3 segundos de intervalo entre as atualizações
+    </script>
+</body>
+</html>

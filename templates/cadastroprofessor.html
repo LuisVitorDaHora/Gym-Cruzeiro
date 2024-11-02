@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Professor</title>
+    <link rel="stylesheet" href="/static/css/cadastroprofessor.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo">GYM CRUZEIRO</div>
+            </div>
+            <div class="links-container">
+                <ul class="nav-links">
+                    <li><a href="inicialadm.html">Início</a></li>
+                    <li><a href="area.adm.professores.html">Professores</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <section class="cadastro-section">
+        <div class="container">
+            <h2 class="title">Cadastrar Novo Professor</h2>
+            <form id="professorForm">
+                <div class="form-group">
+                    <label for="ID">ID:</label>
+                    <input type="text" id="id" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="especialidade">Especialidade:</label>
+                    <input type="text" id="especialidade" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataNascimento">Data de Nascimento:</label>
+                    <input type="date" id="dataNascimento" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataContratacao">Data de Contratação:</label>
+                    <input type="date" id="dataContratacao" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Criar senha:</label>
+                    <input type="password" id="senha" name="senha" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmacao">Confirmar senha:</label>
+                    <input type="password" id="confirmacao" name="confirmacao" class="form-control" required>
+                </div>
+
+                <!-- Mensagem de erro para senhas diferentes -->
+                <div id="erro-senha" style="color: red; display: none;">As senhas não coincidem!</div>
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+
+    
+    
+    <script>
+
+document.getElementById('professorForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    const nome = document.getElementById('nome').value;
+    const cpf = document.getElementById('cpf').value;
+    const email = document.getElementById('email').value;
+    const especialidade = document.getElementById('especialidade').value;
+    const telefone = document.getElementById('telefone').value;
+    const dataNascimento = document.getElementById('dataNascimento').value;
+    const dataContratacao = document.getElementById('dataContratacao').value;
+
+    let hasError = false; // Variável para rastrear se há erros
+
+    // Validação de e-mail (deve conter "@gym")
+    if (!email.includes('@gym')) {
+        alert('O e-mail deve conter "@gym".');
+        hasError = true;
+    }
+
+    // Validação de idade (deve ser maior ou igual a 18 anos)
+    const birthDate = new Date(dataNascimento);
+    const today = new Date();
+    const age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+        age--; // Ajuste se o mês ou dia de aniversário ainda não foi alcançado
+    }
+
+    if (age < 18 || age > 90) {
+        alert('A idade do professor deve estar entre 18 e 90 anos.');
+        hasError = true;
+    }
+
+    // Se não houver erros, cadastrar o professor
+    if (!hasError) {
+        console.log('Professor cadastrado:', {
+            nome,
+            cpf,
+            email,
+            especialidade,
+            telefone,
+            dataNascimento,
+            dataContratacao,
+        });
+
+        // Limpa o formulário após o envio
+        document.getElementById('professorForm').reset();
+        alert('Professor cadastrado com sucesso!');
+    }
+});
+    </script>
+</body>
+</html>

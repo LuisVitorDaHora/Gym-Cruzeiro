@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial Aluno</title>
+    <link rel="stylesheet" href="/static/css/inicial-aluno.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-title">
+            <h1>GYM CRUZEIRO</h1>
+        </div>
+
+        <div class="sidebar-links">
+            <a href="{{ url_for('perfil_aluno', email=email) }}" id="meu-perfil">MEU PERFIL</a>
+            <a href="{{ url_for('area_aluno', email=email) }}" id="historico">HISTÓRICO</a> <!-- Ajuste feito aqui -->
+        </div>
+    </div>
+
+    <div class="content">
+        <div>
+            <div class="user-details">
+                <h2>{{ nome }}</h2>  <!-- Mostra o nome do aluno aqui -->
+                <h4>Aluno</h4>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="{{ url_for('treino_aluno', email=email) }}">
+                <button class="btn">TREINOS</button>
+            </a>
+            <a href="{{ url_for('dashboard') }}">
+                <button class="btn">RESUMO DO PROGRESSO</button>
+            </a>
+        </div>
+    </div>
+
+    <script src="/static/js/inicialaluno.js"></script>
+</body>
+
+</html>
